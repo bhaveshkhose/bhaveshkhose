@@ -5,10 +5,10 @@ public  class vehicle {
 	
 	
 	
-	int maxSpeed;
-	String modalName;
-	int modalYear;
-	int numberOfSeats;
+	 int maxSpeed;
+	 String modalName;
+	 int modalYear;
+	 int numberOfSeats;
 	
 	vehicle()
 	{
