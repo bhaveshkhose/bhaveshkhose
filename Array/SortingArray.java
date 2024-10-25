@@ -90,11 +90,33 @@ public class SortingArray  {
 		return -1;  // array does not contain that int
 		
 	}
+	
+	public static String insertionSort(int[] nums)
+	{
+		for(int i =1 ; i < nums.length-1 ; i++) {
+			
+			int temp = nums[i];
+			int j = i-1;
+			
+			while( j >= 0 && nums[j] > temp) {
+				
+				nums[j] = temp ;
+				j--;
+			
+			}
+			nums[j+1] = temp;
+			
+		}
+		
+		return Arrays.toString(nums);
+	}
 	public static void main(String[] args)
 	{
 		
-		int[] arr = {2,4,5,1,7,5};
+		int[] arr = {9,4,3,5,1};
 		System.out.println(selectionSort(arr));
+		System.out.println(insertionSort(arr));
+		
 		
 		
 	}

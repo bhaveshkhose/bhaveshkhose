@@ -1,6 +1,5 @@
 package Exception_Pack;
 
-import java.util.Scanner;
 
 public class Exception1 {
 	
@@ -51,24 +50,39 @@ public class Exception1 {
 			System.out.println(c);
 		}
 	}
-	static void testException() throws CustomExcep
+	static void testException1() throws CustomExcep
 	{
 		//System.out.println(10/0);
-		throw new CustomExcep("Just for expriance");
+		throw new CustomExcep("Just for expri");
 		
+	}
+	static void testException2() throws CustomExcep2
+	{
+		try {
+			
+			throw new CustomExcep2("Testing");
+			}
+		catch(CustomExcep2 e) {
+			
+			e.addInformation("Exc");
+			
+			
+		}
 	}
 	
 	
 	public static void main(String [] args) throws CustomExcep{
 		
 			try {
-				testException();
+				testException1();
 			} 
 			catch (CustomExcep e) {
 								
 				System.out.println(e.getLocalizedMessage())	;		
 				
 			}
+			
+		
 			
 	
 	
