@@ -1,6 +1,7 @@
 package Array;
 import Inherite_Vehicle.*;
 import java.util.Arrays;
+import java.util.Stack;
 
 
 public class Main{
@@ -55,11 +56,33 @@ public class Main{
 	
 public static void main ( String [] args)
 {
-	int [] a= {1,2,3};
-	int[] b= {4,5,6};
 	
-	
-	System.out.println( medianofTwoSortedArrays(a,b));
+	String str = "Bhavesh";
+	int count =0;
+	for(int i=0 ; i <= str.length() -3; i++) {
+			String sub =str.substring(i,i+3);
+		
+		Stack<Character> st = new Stack<>();	
+		for(char c : sub.toCharArray())
+		{
+			
+			if(c == 'a' || c=='e' || c=='i' || c=='o' || c=='u')
+			{
+				st.push(c);
+			}
+			if(st.size() < count) {
+				count =st.size();
+			}
+			
+			
+		}
+		
+			
+			
+		
+		
+	}
+	System.out.println(count);
 	
 	
 	}

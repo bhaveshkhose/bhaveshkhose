@@ -1,7 +1,11 @@
 package Array;
 
 class Solution {
-    public boolean isPerfectSquare(int num) {
+	
+	public static void main(String [] args) {
+		System.out.println(isPerfectSquare(7));
+	}
+	public static boolean isPerfectSquare(int num) {
 
         int left=1;
         int right=num;

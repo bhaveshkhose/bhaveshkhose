@@ -19,6 +19,7 @@ public class Smart_phone implements camera,Telephone,torch{
 	public void click_photos() {
 		
 		System.out.println("khicchhik");
+		
 		// TODO Auto-generated method stub
 		
 	}
