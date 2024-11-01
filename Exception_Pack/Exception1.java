@@ -1,5 +1,6 @@
 package Exception_Pack;
 
+import java.util.Scanner;
 
 public class Exception1 {
 	
@@ -71,20 +72,27 @@ public class Exception1 {
 	}
 	
 	
-	public static void main(String [] args) throws CustomExcep{
+	public static void main(String [] args) throws CustomExcep3{
 		
-			try {
-				testException1();
-			} 
-			catch (CustomExcep e) {
-								
-				System.out.println(e.getLocalizedMessage())	;		
-				
-			}
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Number of student Entering in the class :-");
+		int Studentno = sc.nextInt();
+		
+		try
+		{if(Studentno <=50) {
+			System.out.println("You can enter in the class ");
+			
+		}
+		}
+		catch(CustomExcep3 e){
+			e.addSuppressed("Excep3You cna't enter in the room");
+		}
+		}
+		
 			
 		
 			
 	
 	
 	}
-}
+
