@@ -1,4 +1,6 @@
 #include<stdio.h>
+#include<string.h>
+
 //Method for sorting array by Insertion sort
 void insertionSort(int arr[], int n) {
     for (int i = 1; i < n; i++) {
@@ -34,6 +36,36 @@ void selectionSort(int arr[], int n) {
     }
 }
 
+// Method for pattern matching 
+void patternMatching(char text[], char pattern[]) {
+    int textLen = strlen(text);
+    int patternLen = strlen(pattern);
+    int found = 0;
+
+    // Loop through the text
+    for (int i = 0; i <= textLen - patternLen; i++) {
+        int j;
+
+        // Check if the pattern matches the substring in text
+        for (j = 0; j < patternLen; j++) {
+            if (text[i + j] != pattern[j]) {
+                break;
+            }
+        }
+
+        // If the pattern is found
+        if (j == patternLen) {
+            printf("Pattern found at index %d\n", i);
+            found = 1;
+        }
+    }
+
+    // If pattern is not found
+    if (!found) {
+        printf("Pattern not found in the text.\n");
+    }
+}
+
 // Function to print the array
 void printArray(int arr[], int n) {
     for (int i = 0; i < n; i++) {
@@ -56,6 +88,11 @@ int main() {
 
     printf("Using Insertion,Sorted is array: ");
     printArray(arr, n);
+
+    int[] nums = {30,23,1,5,4,3,19};
+    int i = sizeof(nums) / sizeof(arr[0]);
+    selectionSort(nums , i);
+    printArray(nums , i);
 
     return 0;
 }
