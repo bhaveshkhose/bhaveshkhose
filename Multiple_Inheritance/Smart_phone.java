@@ -1,5 +1,7 @@
 package Multiple_Inheritance;
 
+import java.util.Stack;
+
 public class Smart_phone implements camera,Telephone,torch{
 
 	@Override
@@ -35,6 +37,14 @@ public class Smart_phone implements camera,Telephone,torch{
 			
 		}
 		// TODO Auto-generated method stub
+	public static void main(String [] args) {
+		Stack< Character > st = new Stack<>();
+		String s = "bhavesh";
+		char[] c = s.toCharArray();
+		System.out.println(c[0]);
+		st.push('a');
+		System.out.println(st.peek());
+	}
 		
 	}
 

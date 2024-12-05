@@ -18,11 +18,11 @@ public class HelicopterAnimation extends JPanel implements Runnable {
         super.paintComponent(g);
 
         // Draw helicopter body
-        g.setColor(Color.GRAY);
+        g.setColor(Color.GREEN);
         g.fillRect(xPosition, yPosition, 100, 20); // Helicopter body
         
         // Draw helicopter rotor
-        g.setColor(Color.BLACK);
+        g.setColor(Color.RED);
         g.fillRect(xPosition + 10, yPosition - 10, 80, 5); // Rotor on top
 
         // Draw helicopter tail

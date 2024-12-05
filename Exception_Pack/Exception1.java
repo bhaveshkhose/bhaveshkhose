@@ -74,20 +74,32 @@ public class Exception1 {
 	
 	public static void main(String [] args) throws CustomExcep3{
 		
-		Scanner sc = new Scanner(System.in);
-		System.out.print("Number of student Entering in the class :-");
-		int Studentno = sc.nextInt();
+		M1();
 		
-		try
-		{if(Studentno <=50) {
-			System.out.println("You can enter in the class ");
-			
+		
 		}
+	static void M1() {
+		System.out.println("Enter in M1");
+		M2();
+		System.out.println("Exited form M!");
+		
+	}
+	static void M2() {
+		System.out.println("Enter in M2");
+		try {
+			M3();
 		}
-		catch(CustomExcep3 e){
-			e.addSuppressed("Excep3You cna't enter in the room");
-		}
-		}
+		catch(Exception e) {
+			System.out.println("b")
+;		}
+		System.out.println("Exited form M2");
+		
+	}
+	static void M3() {
+	int a = 10 , b =0 ;
+	int c = a/b;
+	System.out.println(c);
+	}
 		
 			
 		
